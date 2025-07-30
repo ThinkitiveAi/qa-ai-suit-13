@@ -1,0 +1,727 @@
+{
+	"info": {
+		"_postman_id": "5f911d2a-c8ea-4d67-b4cf-9b8f6b0cd80c",
+		"name": "eCarehealth AI session collection",
+		"description": "This is the eCareHealth AI session Postman collection.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45277340",
+		"_collection_link": "https://samruddhi-5824597.postman.co/workspace/samruddhi's-Workspace~dc9b0381-3ac7-4f2e-8fef-910767686ca7/collection/45277340-5f911d2a-c8ea-4d67-b4cf-9b8f6b0cd80c?action=share&source=collection_link&creator=45277340"
+	},
+	"item": [
+		{
+			"name": "Provider Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "X-TENANT-ID",
+						"value": "stage_aithinkitive"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"rose.gomez@jourrapide.com\",\r\n    \"password\": \"Pass@123\",\r\n    \"xTENANTID\": \"stage_aithinkitive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stage-api.ecarehealth.com/api/master/login",
+					"protocol": "https",
+					"host": [
+						"stage-api",
+						"ecarehealth",
+						"com"
+					],
+					"path": [
+						"api",
+						"master",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Patient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJldEJ0MVpKbDlOQ1pEX0VMWUM2dDlISzItQkQybU5wOHZHX3lhczFXN1pZIn0.eyJleHAiOjE3NTMzODA0NzUsImlhdCI6MTc1MzM0NDQ3NSwianRpIjoiNWRkNzgyY2UtZThjMy00Y2JkLWFmNGQtMDZhZDJhZmYxNGNjIiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2VfYWl0aGlua2l0aXZlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxMjFjZjk2LWFkM2EtNDIxMC04N2ViLWFkNDNlZjcxYmY4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImpzLWNsaWVudCIsInNpZCI6IjZjOTVhZDFiLWUxY2MtNDRkMy1hNDBkLWJhOTQ3OTQ5NzNjNyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJQUk9WSURFUiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zdGFnZV9haXRoaW5raXRpdmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUm9zZSBHb21leiIsInByZWZlcnJlZF91c2VybmFtZSI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20iLCJnaXZlbl9uYW1lIjoiUm9zZSIsImZhbWlseV9uYW1lIjoiR29tZXoiLCJlbWFpbCI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20ifQ.CKD7wR_PNrt2aqn5gL6kvc1spcGdS13pWog4QI5N5R4bfIRxDzLf6DcZ0L1fqP-K9clIv2Ph-jGg7im3OqvLrCwQ0BSbp6x8R_8lIkoe7mjuY-Ud_dqilHIHkoyXod-gAV5wRlNomHcieyZSaA_O91OjKnqKZTOu2AZszyXRj8PoKbahQBBE8oxjfjFADYuInk7RPy3dVjujQzn8Zy4uszh7Xc8LDTYznCQRSW8LTMxEZd4uZ5L6omUNakuDJ2WxCqAPAN3cDJoiTBuYKL3oiWorQ96NQBiqq3BUGhUmGAjLkUkOjbAJMB_Wik9FSv00Trowf_pjDaSOvLpX7Gkl_w"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "X-TENANT-ID",
+						"value": "stage_aithinkitive"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNotAvailable\": true,\r\n    \"emailNotAvailable\": true,\r\n    \"registrationDate\": \"\",\r\n    \"firstName\": \"Samuel\",\r\n    \"middleName\": \"\",\r\n    \"lastName\": \"Peterson\",\r\n    \"timezone\": \"IST\",\r\n    \"birthDate\": \"1994-08-16T18:30:00.000Z\",\r\n    \"gender\": \"MALE\",\r\n    \"ssn\": \"\",\r\n    \"mrn\": \"\",\r\n    \"languages\": null,\r\n    \"avatar\": \"\",\r\n    \"mobileNumber\": \"\",\r\n    \"faxNumber\": \"\",\r\n    \"homePhone\": \"\",\r\n    \"address\": {\r\n        \"line1\": \"\",\r\n        \"line2\": \"\",\r\n        \"city\": \"\",\r\n        \"state\": \"\",\r\n        \"country\": \"\",\r\n        \"zipcode\": \"\"\r\n    },\r\n    \"emergencyContacts\": [\r\n        {\r\n            \"firstName\": \"\",\r\n            \"lastName\": \"\",\r\n            \"mobile\": \"\"\r\n        }\r\n    ],\r\n    \"patientInsurances\": [\r\n        {\r\n            \"active\": true,\r\n            \"insuranceId\": \"\",\r\n            \"copayType\": \"FIXED\",\r\n            \"coInsurance\": \"\",\r\n            \"claimNumber\": \"\",\r\n            \"note\": \"\",\r\n            \"deductibleAmount\": \"\",\r\n            \"employerName\": \"\",\r\n            \"employerAddress\": {\r\n                \"line1\": \"\",\r\n                \"line2\": \"\",\r\n                \"city\": \"\",\r\n                \"state\": \"\",\r\n                \"country\": \"\",\r\n                \"zipcode\": \"\"\r\n            },\r\n            \"subscriberFirstName\": \"\",\r\n            \"subscriberLastName\": \"\",\r\n            \"subscriberMiddleName\": \"\",\r\n            \"subscriberSsn\": \"\",\r\n            \"subscriberMobileNumber\": \"\",\r\n            \"subscriberAddress\": {\r\n                \"line1\": \"\",\r\n                \"line2\": \"\",\r\n                \"city\": \"\",\r\n                \"state\": \"\",\r\n                \"country\": \"\",\r\n                \"zipcode\": \"\"\r\n            },\r\n            \"groupId\": \"\",\r\n            \"memberId\": \"\",\r\n            \"groupName\": \"\",\r\n            \"frontPhoto\": \"\",\r\n            \"backPhoto\": \"\",\r\n            \"insuredFirstName\": \"\",\r\n            \"insuredLastName\": \"\",\r\n            \"address\": {\r\n                \"line1\": \"\",\r\n                \"line2\": \"\",\r\n                \"city\": \"\",\r\n                \"state\": \"\",\r\n                \"country\": \"\",\r\n                \"zipcode\": \"\"\r\n            },\r\n            \"insuredBirthDate\": \"\",\r\n            \"coPay\": \"\",\r\n            \"insurancePayer\": {}\r\n        }\r\n    ],\r\n    \"emailConsent\": false,\r\n    \"messageConsent\": false,\r\n    \"callConsent\": false,\r\n    \"patientConsentEntities\": [\r\n        {\r\n            \"signedDate\": \"2025-07-24T08:07:34.316Z\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stage-api.ecarehealth.com/api/master/patient",
+					"protocol": "https",
+					"host": [
+						"stage-api",
+						"ecarehealth",
+						"com"
+					],
+					"path": [
+						"api",
+						"master",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Provider",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJldEJ0MVpKbDlOQ1pEX0VMWUM2dDlISzItQkQybU5wOHZHX3lhczFXN1pZIn0.eyJleHAiOjE3NTMzODA0NzUsImlhdCI6MTc1MzM0NDQ3NSwianRpIjoiNWRkNzgyY2UtZThjMy00Y2JkLWFmNGQtMDZhZDJhZmYxNGNjIiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2VfYWl0aGlua2l0aXZlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxMjFjZjk2LWFkM2EtNDIxMC04N2ViLWFkNDNlZjcxYmY4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImpzLWNsaWVudCIsInNpZCI6IjZjOTVhZDFiLWUxY2MtNDRkMy1hNDBkLWJhOTQ3OTQ5NzNjNyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJQUk9WSURFUiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zdGFnZV9haXRoaW5raXRpdmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUm9zZSBHb21leiIsInByZWZlcnJlZF91c2VybmFtZSI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20iLCJnaXZlbl9uYW1lIjoiUm9zZSIsImZhbWlseV9uYW1lIjoiR29tZXoiLCJlbWFpbCI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20ifQ.CKD7wR_PNrt2aqn5gL6kvc1spcGdS13pWog4QI5N5R4bfIRxDzLf6DcZ0L1fqP-K9clIv2Ph-jGg7im3OqvLrCwQ0BSbp6x8R_8lIkoe7mjuY-Ud_dqilHIHkoyXod-gAV5wRlNomHcieyZSaA_O91OjKnqKZTOu2AZszyXRj8PoKbahQBBE8oxjfjFADYuInk7RPy3dVjujQzn8Zy4uszh7Xc8LDTYznCQRSW8LTMxEZd4uZ5L6omUNakuDJ2WxCqAPAN3cDJoiTBuYKL3oiWorQ96NQBiqq3BUGhUmGAjLkUkOjbAJMB_Wik9FSv00Trowf_pjDaSOvLpX7Gkl_w"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleType\": \"PROVIDER\",\r\n    \"active\": false,\r\n    \"admin_access\": true,\r\n    \"status\": false,\r\n    \"avatar\": \"\",\r\n    \"role\": \"PROVIDER\",\r\n    \"firstName\": \"Steven\",\r\n    \"lastName\": \"Miller\",\r\n    \"gender\": \"MALE\",\r\n    \"phone\": \"\",\r\n    \"npi\": \"\",\r\n    \"specialities\": null,\r\n    \"groupNpiNumber\": \"\",\r\n    \"licensedStates\": null,\r\n    \"licenseNumber\": \"\",\r\n    \"acceptedInsurances\": null,\r\n    \"experience\": \"\",\r\n    \"taxonomyNumber\": \"\",\r\n    \"workLocations\": null,\r\n    \"email\": \"saurabh.kale+steven@medarch.com\",\r\n    \"officeFaxNumber\": \"\",\r\n    \"areaFocus\": \"\",\r\n    \"hospitalAffiliation\": \"\",\r\n    \"ageGroupSeen\": null,\r\n    \"spokenLanguages\": null,\r\n    \"providerEmployment\": \"\",\r\n    \"insurance_verification\": \"\",\r\n    \"prior_authorization\": \"\",\r\n    \"secondOpinion\": \"\",\r\n    \"careService\": null,\r\n    \"bio\": \"\",\r\n    \"expertise\": \"\",\r\n    \"workExperience\": \"\",\r\n    \"licenceInformation\": [\r\n        {\r\n            \"uuid\": \"\",\r\n            \"licenseState\": \"\",\r\n            \"licenseNumber\": \"\"\r\n        }\r\n    ],\r\n    \"deaInformation\": [\r\n        {\r\n            \"deaState\": \"\",\r\n            \"deaNumber\": \"\",\r\n            \"deaTermDate\": \"\",\r\n            \"deaActiveDate\": \"\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stage-api.ecarehealth.com/api/master/provider",
+					"protocol": "https",
+					"host": [
+						"stage-api",
+						"ecarehealth",
+						"com"
+					],
+					"path": [
+						"api",
+						"master",
+						"provider"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Availability",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJldEJ0MVpKbDlOQ1pEX0VMWUM2dDlISzItQkQybU5wOHZHX3lhczFXN1pZIn0.eyJleHAiOjE3NTMzODA0NzUsImlhdCI6MTc1MzM0NDQ3NSwianRpIjoiNWRkNzgyY2UtZThjMy00Y2JkLWFmNGQtMDZhZDJhZmYxNGNjIiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2VfYWl0aGlua2l0aXZlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxMjFjZjk2LWFkM2EtNDIxMC04N2ViLWFkNDNlZjcxYmY4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImpzLWNsaWVudCIsInNpZCI6IjZjOTVhZDFiLWUxY2MtNDRkMy1hNDBkLWJhOTQ3OTQ5NzNjNyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJQUk9WSURFUiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zdGFnZV9haXRoaW5raXRpdmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUm9zZSBHb21leiIsInByZWZlcnJlZF91c2VybmFtZSI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20iLCJnaXZlbl9uYW1lIjoiUm9zZSIsImZhbWlseV9uYW1lIjoiR29tZXoiLCJlbWFpbCI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20ifQ.CKD7wR_PNrt2aqn5gL6kvc1spcGdS13pWog4QI5N5R4bfIRxDzLf6DcZ0L1fqP-K9clIv2Ph-jGg7im3OqvLrCwQ0BSbp6x8R_8lIkoe7mjuY-Ud_dqilHIHkoyXod-gAV5wRlNomHcieyZSaA_O91OjKnqKZTOu2AZszyXRj8PoKbahQBBE8oxjfjFADYuInk7RPy3dVjujQzn8Zy4uszh7Xc8LDTYznCQRSW8LTMxEZd4uZ5L6omUNakuDJ2WxCqAPAN3cDJoiTBuYKL3oiWorQ96NQBiqq3BUGhUmGAjLkUkOjbAJMB_Wik9FSv00Trowf_pjDaSOvLpX7Gkl_w"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "X-TENANT-ID",
+						"value": "stage_aithinkitive"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"setToWeekdays\": false,\r\n    \"providerId\": \"849cded0-5fab-45c3-a16f-c0dcf07f3938\",\r\n    \"bookingWindow\": \"3\",\r\n    \"timezone\": \"EST\",\r\n    \"bufferTime\": 0,\r\n    \"initialConsultTime\": 0,\r\n    \"followupConsultTime\": 0,\r\n    \"settings\": [\r\n        {\r\n            \"type\": \"NEW\",\r\n            \"slotTime\": \"30\",\r\n            \"minNoticeUnit\": \"8_HOUR\"\r\n        }\r\n    ],\r\n    \"blockDays\": [],\r\n    \"daySlots\": [\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"12:00:00\",\r\n            \"endTime\": \"13:00:00\",\r\n            \"availabilityMode\": \"VIRTUAL\"\r\n        }\r\n    ],\r\n    \"bookBefore\": \"undefined undefined\",\r\n    \"xTENANTID\": \"stage_aithinkitive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stage-api.ecarehealth.com/api/master/provider/availability-setting",
+					"protocol": "https",
+					"host": [
+						"stage-api",
+						"ecarehealth",
+						"com"
+					],
+					"path": [
+						"api",
+						"master",
+						"provider",
+						"availability-setting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book appointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJldEJ0MVpKbDlOQ1pEX0VMWUM2dDlISzItQkQybU5wOHZHX3lhczFXN1pZIn0.eyJleHAiOjE3NTMzODA0NzUsImlhdCI6MTc1MzM0NDQ3NSwianRpIjoiNWRkNzgyY2UtZThjMy00Y2JkLWFmNGQtMDZhZDJhZmYxNGNjIiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2VfYWl0aGlua2l0aXZlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxMjFjZjk2LWFkM2EtNDIxMC04N2ViLWFkNDNlZjcxYmY4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImpzLWNsaWVudCIsInNpZCI6IjZjOTVhZDFiLWUxY2MtNDRkMy1hNDBkLWJhOTQ3OTQ5NzNjNyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJQUk9WSURFUiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zdGFnZV9haXRoaW5raXRpdmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUm9zZSBHb21leiIsInByZWZlcnJlZF91c2VybmFtZSI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20iLCJnaXZlbl9uYW1lIjoiUm9zZSIsImZhbWlseV9uYW1lIjoiR29tZXoiLCJlbWFpbCI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20ifQ.CKD7wR_PNrt2aqn5gL6kvc1spcGdS13pWog4QI5N5R4bfIRxDzLf6DcZ0L1fqP-K9clIv2Ph-jGg7im3OqvLrCwQ0BSbp6x8R_8lIkoe7mjuY-Ud_dqilHIHkoyXod-gAV5wRlNomHcieyZSaA_O91OjKnqKZTOu2AZszyXRj8PoKbahQBBE8oxjfjFADYuInk7RPy3dVjujQzn8Zy4uszh7Xc8LDTYznCQRSW8LTMxEZd4uZ5L6omUNakuDJ2WxCqAPAN3cDJoiTBuYKL3oiWorQ96NQBiqq3BUGhUmGAjLkUkOjbAJMB_Wik9FSv00Trowf_pjDaSOvLpX7Gkl_w"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "X-TENANT-ID",
+						"value": "stage_aithinkitive"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mode\": \"VIRTUAL\",\r\n    \"patientId\": \"f3baccaf-1203-4451-90e6-8120952b31ae\",\r\n    \"customForms\": null,\r\n    \"visit_type\": \"\",\r\n    \"type\": \"NEW\",\r\n    \"paymentType\": \"CASH\",\r\n    \"providerId\": \"849cded0-5fab-45c3-a16f-c0dcf07f3938\",\r\n    \"startTime\": \"2025-08-04T17:00:00Z\",\r\n    \"endTime\": \"2025-08-04T17:30:00Z\",\r\n    \"insurance_type\": \"\",\r\n    \"note\": \"\",\r\n    \"authorization\": \"\",\r\n    \"forms\": [],\r\n    \"chiefComplaint\": \"appointment test\",\r\n    \"isRecurring\": false,\r\n    \"recurringFrequency\": \"daily\",\r\n    \"reminder_set\": false,\r\n    \"endType\": \"never\",\r\n    \"endDate\": \"2025-07-24T08:07:34.318Z\",\r\n    \"endAfter\": 5,\r\n    \"customFrequency\": 1,\r\n    \"customFrequencyUnit\": \"days\",\r\n    \"selectedWeekdays\": [],\r\n    \"reminder_before_number\": 1,\r\n    \"timezone\": \"CST\",\r\n    \"duration\": 30,\r\n    \"xTENANTID\": \"stage_aithinkitive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stage-api.ecarehealth.com/api/master/appointment",
+					"protocol": "https",
+					"host": [
+						"stage-api",
+						"ecarehealth",
+						"com"
+					],
+					"path": [
+						"api",
+						"master",
+						"appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Provider",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJldEJ0MVpKbDlOQ1pEX0VMWUM2dDlISzItQkQybU5wOHZHX3lhczFXN1pZIn0.eyJleHAiOjE3NTMzOTUwOTIsImlhdCI6MTc1MzM1OTA5MiwianRpIjoiM2QwZmQ4NGYtZjY2ZC00N2ExLWFhNzctYTY1MDk3ZjVlNWEyIiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2VfYWl0aGlua2l0aXZlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxMjFjZjk2LWFkM2EtNDIxMC04N2ViLWFkNDNlZjcxYmY4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImpzLWNsaWVudCIsInNpZCI6IjdiMDU0M2YyLTk4Y2EtNGU3ZC05MGVkLTMzZTNkMjRlOTVkMiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJQUk9WSURFUiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zdGFnZV9haXRoaW5raXRpdmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUm9zZSBHb21leiIsInByZWZlcnJlZF91c2VybmFtZSI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20iLCJnaXZlbl9uYW1lIjoiUm9zZSIsImZhbWlseV9uYW1lIjoiR29tZXoiLCJlbWFpbCI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20ifQ.Zn1WKXP17jBxBxWQnmLRADuDF04z8zb3kY76Sv3ShAYZPaguvWUO_Pc8LfjzFhRIXDY2AuFyPXr6Jy0LMg3vROPb_7nlHXwqEb37SSx--oOrTSTJUxCQq_jyVoc6y3AYYRfXsDMVAK6sBbDuorfidpakQZnNXDWI3MYYQBcGIxV7LZRPZR3XOznRmiEkyMrwrZ1jgaeqdRydjnJPZg0bF_ITRXEvGwJZKWl7F-_qyAB6IwYjcf-mtjnQXWw9TpnvBX-pGGcODuCZa113TR8LgdvOx8b8woYbU5Pn22uGy2RtJmbuu91EK9Y2nThPaR8bTDDByF4cjqXIZZrrommFuA"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"url": {
+					"raw": "https://stage-api.ecarehealth.com/api/master/provider?page=0&size=20",
+					"protocol": "https",
+					"host": [
+						"stage-api",
+						"ecarehealth",
+						"com"
+					],
+					"path": [
+						"api",
+						"master",
+						"provider"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJldEJ0MVpKbDlOQ1pEX0VMWUM2dDlISzItQkQybU5wOHZHX3lhczFXN1pZIn0.eyJleHAiOjE3NTMzOTUwOTIsImlhdCI6MTc1MzM1OTA5MiwianRpIjoiM2QwZmQ4NGYtZjY2ZC00N2ExLWFhNzctYTY1MDk3ZjVlNWEyIiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2VfYWl0aGlua2l0aXZlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxMjFjZjk2LWFkM2EtNDIxMC04N2ViLWFkNDNlZjcxYmY4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImpzLWNsaWVudCIsInNpZCI6IjdiMDU0M2YyLTk4Y2EtNGU3ZC05MGVkLTMzZTNkMjRlOTVkMiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJQUk9WSURFUiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zdGFnZV9haXRoaW5raXRpdmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUm9zZSBHb21leiIsInByZWZlcnJlZF91c2VybmFtZSI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20iLCJnaXZlbl9uYW1lIjoiUm9zZSIsImZhbWlseV9uYW1lIjoiR29tZXoiLCJlbWFpbCI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20ifQ.Zn1WKXP17jBxBxWQnmLRADuDF04z8zb3kY76Sv3ShAYZPaguvWUO_Pc8LfjzFhRIXDY2AuFyPXr6Jy0LMg3vROPb_7nlHXwqEb37SSx--oOrTSTJUxCQq_jyVoc6y3AYYRfXsDMVAK6sBbDuorfidpakQZnNXDWI3MYYQBcGIxV7LZRPZR3XOznRmiEkyMrwrZ1jgaeqdRydjnJPZg0bF_ITRXEvGwJZKWl7F-_qyAB6IwYjcf-mtjnQXWw9TpnvBX-pGGcODuCZa113TR8LgdvOx8b8woYbU5Pn22uGy2RtJmbuu91EK9Y2nThPaR8bTDDByF4cjqXIZZrrommFuA"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://stage_aithinkitive.uat.provider.ecarehealth.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "X-TENANT-ID",
+						"value": "stage_aithinkitive"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"url": {
+					"raw": "https://stage-api.ecarehealth.com/api/master/patient?page=0&size=20&searchString=",
+					"protocol": "https",
+					"host": [
+						"stage-api",
+						"ecarehealth",
+						"com"
+					],
+					"path": [
+						"api",
+						"master",
+						"patient"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						},
+						{
+							"key": "searchString",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get availability",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzUWg5cEl5dXY4OUlOejlEc0pwV3VRUEx4LVJaNkV4UU5vYVFNUFVaR1gwIn0.eyJleHAiOjE3NTM0MDQ5NDgsImlhdCI6MTc1MzM2ODk0OCwianRpIjoiNTMzYmI2MGYtNmJkNS00MThkLWJjNmEtMmRhNTIxMDIxMGY5IiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2Vfa2V0YW1pbiIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiNTYyMTQ2Ni1hZmE4LTQ5MmUtOWM5ZC05NzRlZDc4NjZiOWQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJqcy1jbGllbnQiLCJzaWQiOiJkMDEyYjY5Ni0yMDdiLTQ1NTYtOTJmYi1hYjA0YmRlZGZlMmYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtc3RhZ2Vfa2V0YW1pbiIsIm9mZmxpbmVfYWNjZXNzIiwiUFJPVklERVIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IkNocnlzIFdlc3RvbmUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhbW9sLnNoZXRlK3RwQG1lZGFyY2guY29tIiwiZ2l2ZW5fbmFtZSI6IkNocnlzIiwiZmFtaWx5X25hbWUiOiJXZXN0b25lIiwiZW1haWwiOiJhbW9sLnNoZXRlK3RwQG1lZGFyY2guY29tIn0.nJd1aTb8kHoK0YrcNOyLt6nKlNqvhoi_amcvdfnu3OEFki-XXRL8emBptlqvt2prUz0Kp7NfVtrC_ljpfAVMZbtxW02ePtN0gumTdO00IlhNlorGQlEOqyTlSP9PJ-utU-7t2Y2b8yEdXNQGMoz3NI5FYaMmwCRPmFNPVnAJBgi47Kprq_7IuawOmM1IM52v7-HTE1kowfSJMnp8YAbZ-3BNskHmVD204TZv_huKQ8HjoGSHu-g7asaS470C271mE9hl8t2j3ehfUmmi-hYiFt1qpjn47icbWL5H80hNyi9pWaz3pP4tmIXuby7A-66GfOZ5xx2p4ptbHQcOARiHpg"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "https://stage_ketamin.uat.provider.ecarehealth.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://stage_ketamin.uat.provider.ecarehealth.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "X-TENANT-ID",
+						"value": "stage_ketamin"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"url": {
+					"raw": "https://stage-api.ecarehealth.com/api/master/provider/1d89f757-42bb-4af9-842a-9aa4a99533ab/availability-setting",
+					"protocol": "https",
+					"host": [
+						"stage-api",
+						"ecarehealth",
+						"com"
+					],
+					"path": [
+						"api",
+						"master",
+						"provider",
+						"1d89f757-42bb-4af9-842a-9aa4a99533ab",
+						"availability-setting"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

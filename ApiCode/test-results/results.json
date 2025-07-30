@@ -1,0 +1,186 @@
+{
+  "config": {
+    "configFile": "C:\\Chadcredentials\\ApiCode\\playwright.config.ts",
+    "rootDir": "C:/Chadcredentials/ApiCode/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "C:\\Chadcredentials\\ApiCode\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Chadcredentials/ApiCode/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Healthcare API Tests",
+        "name": "Healthcare API Tests",
+        "testDir": "C:/Chadcredentials/ApiCode/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "tests/**/*.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "test-complete-workflow.ts",
+      "file": "test-complete-workflow.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Healthcare API Testing - Complete 4-Step Workflow",
+          "file": "test-complete-workflow.ts",
+          "line": 41,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Complete API Workflow: Provider → Availability → Patient → Appointment",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Healthcare API Tests",
+                  "projectName": "Healthcare API Tests",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 444,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m300\u001b[39m\nReceived:   \u001b[31m401\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m300\u001b[39m\nReceived:   \u001b[31m401\u001b[39m\n    at C:\\Chadcredentials\\ApiCode\\tests\\test-complete-workflow.ts:124:32",
+                        "location": {
+                          "file": "C:\\Chadcredentials\\ApiCode\\tests\\test-complete-workflow.ts",
+                          "column": 32,
+                          "line": 124
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 122 |\u001b[39m     \u001b[90m// Validate Step 1 response\u001b[39m\n \u001b[90m 123 |\u001b[39m     expect(response1\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 124 |\u001b[39m     expect(response1\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m300\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 125 |\u001b[39m\n \u001b[90m 126 |\u001b[39m     \u001b[90m// Extract const providerId = (await response1.json()).providerId; - as specified\u001b[39m\n \u001b[90m 127 |\u001b[39m     \u001b[36mconst\u001b[39m providerId \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m response1\u001b[33m.\u001b[39mjson())\u001b[33m.\u001b[39mproviderId\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Chadcredentials\\ApiCode\\tests\\test-complete-workflow.ts",
+                            "column": 32,
+                            "line": 124
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m300\u001b[39m\nReceived:   \u001b[31m401\u001b[39m\n\n\u001b[0m \u001b[90m 122 |\u001b[39m     \u001b[90m// Validate Step 1 response\u001b[39m\n \u001b[90m 123 |\u001b[39m     expect(response1\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 124 |\u001b[39m     expect(response1\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m300\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 125 |\u001b[39m\n \u001b[90m 126 |\u001b[39m     \u001b[90m// Extract const providerId = (await response1.json()).providerId; - as specified\u001b[39m\n \u001b[90m 127 |\u001b[39m     \u001b[36mconst\u001b[39m providerId \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m response1\u001b[33m.\u001b[39mjson())\u001b[33m.\u001b[39mproviderId\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Chadcredentials\\ApiCode\\tests\\test-complete-workflow.ts:124:32\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🚀 Starting Healthcare API Testing Workflow...\n"
+                        },
+                        {
+                          "text": "Base URL: https://stage-api.ecarehealth.com\n"
+                        },
+                        {
+                          "text": "Tenant ID: stage_aithinkitive\n"
+                        },
+                        {
+                          "text": "Headers: {\n  Authorization: \u001b[32m'Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJldEJ0MVpKbDlOQ1pEX0VMWUM2dDlISzItQkQybU5wOHZHX3lhczFXN1pZIn0.eyJleHAiOjE3NTM2MzE1NjgsImlhdCI6MTc1MzU5NTU2OCwianRpIjoiYTk2OTUyNGMtMzAwYS00ZjcwLTlmMDQtYmQ3MTgwYmM5OTBkIiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2VfYWl0aGlua2l0aXZlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxMjFjZjk2LWFkM2EtNDIxMC04N2ViLWFkNDNlZjcxYmY4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImpzLWNsaWVudCIsInNpZCI6ImU2NGJmZWEzLWFlNTctNGIwNC1iODMyLTZjYjM0YjllZmQ3NiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJQUk9WSURFUiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zdGFnZV9haXRoaW5raXRpdmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUm9zZSBHb21leiIsInByZWZlcnJlZF91c2VybmFtZSI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20iLCJnaXZlbl9uYW1lIjoiUm9zZSIsImZhbWlseV9uYW1lIjoiR29tZXoiLCJlbWFpbCI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20ifQ.YLwVaATMOWxOPTAlrCuVHuxklgIrDpUQBNMIzo0wutP6gwGXejlXLoAQu8hweEWpjK90geBMBbocqkVO9NaUnzLxrjhRmTHAnyvY7-DYGt7xqCFQdAzXVE1PQf6A9CN8iN3RXlI-peAgB8wNwxfkvbyqZshJeUXsVwzdqWBrceIYDmFZ2kywXMdChAqlyGvvxeqnirly0BhgOSoLL8RttTPV4w9r0vDY_FG6fwJ4nb6HhBn9yQ0NXcvodGEVC2aXTRj1eJoTRDZG-9hzZnTDxDSGduoRyKk-GgvaXk-JlO6X0nff-sVMvx50ZEm6vzDnuZ37tnmo0GoFVIGz3cU8bA'\u001b[39m,\n  \u001b[32m'Content-Type'\u001b[39m: \u001b[32m'application/json'\u001b[39m,\n  \u001b[32m'x-tenantid'\u001b[39m: \u001b[32m'stage_aithinkitive'\u001b[39m\n}\n"
+                        },
+                        {
+                          "text": "\n📋 STEP 1: Creating Provider...\n"
+                        },
+                        {
+                          "text": "Request URL: https://stage-api.ecarehealth.com/api/master/provider\n"
+                        },
+                        {
+                          "text": "Request Headers: {\n  Authorization: \u001b[32m'Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJldEJ0MVpKbDlOQ1pEX0VMWUM2dDlISzItQkQybU5wOHZHX3lhczFXN1pZIn0.eyJleHAiOjE3NTM2MzE1NjgsImlhdCI6MTc1MzU5NTU2OCwianRpIjoiYTk2OTUyNGMtMzAwYS00ZjcwLTlmMDQtYmQ3MTgwYmM5OTBkIiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2VfYWl0aGlua2l0aXZlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxMjFjZjk2LWFkM2EtNDIxMC04N2ViLWFkNDNlZjcxYmY4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImpzLWNsaWVudCIsInNpZCI6ImU2NGJmZWEzLWFlNTctNGIwNC1iODMyLTZjYjM0YjllZmQ3NiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJQUk9WSURFUiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zdGFnZV9haXRoaW5raXRpdmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUm9zZSBHb21leiIsInByZWZlcnJlZF91c2VybmFtZSI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20iLCJnaXZlbl9uYW1lIjoiUm9zZSIsImZhbWlseV9uYW1lIjoiR29tZXoiLCJlbWFpbCI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20ifQ.YLwVaATMOWxOPTAlrCuVHuxklgIrDpUQBNMIzo0wutP6gwGXejlXLoAQu8hweEWpjK90geBMBbocqkVO9NaUnzLxrjhRmTHAnyvY7-DYGt7xqCFQdAzXVE1PQf6A9CN8iN3RXlI-peAgB8wNwxfkvbyqZshJeUXsVwzdqWBrceIYDmFZ2kywXMdChAqlyGvvxeqnirly0BhgOSoLL8RttTPV4w9r0vDY_FG6fwJ4nb6HhBn9yQ0NXcvodGEVC2aXTRj1eJoTRDZG-9hzZnTDxDSGduoRyKk-GgvaXk-JlO6X0nff-sVMvx50ZEm6vzDnuZ37tnmo0GoFVIGz3cU8bA'\u001b[39m,\n  \u001b[32m'Content-Type'\u001b[39m: \u001b[32m'application/json'\u001b[39m,\n  \u001b[32m'x-tenantid'\u001b[39m: \u001b[32m'stage_aithinkitive'\u001b[39m\n}\n"
+                        },
+                        {
+                          "text": "Request Payload: {\n  \"roleType\": \"PROVIDER\",\n  \"active\": false,\n  \"admin_access\": true,\n  \"status\": false,\n  \"avatar\": \"\",\n  \"role\": \"PROVIDER\",\n  \"firstName\": \"sanjana\",\n  \"lastName\": \"parmar\",\n  \"gender\": \"FEMALE\",\n  \"phone\": \"9797979999\",\n  \"npi\": \"9998884488\",\n  \"specialities\": null,\n  \"groupNpiNumber\": \"\",\n  \"licensedStates\": null,\n  \"licenseNumber\": \"\",\n  \"acceptedInsurances\": null,\n  \"experience\": \"\",\n  \"taxonomyNumber\": \"\",\n  \"workLocations\": null,\n  \"email\": \"sanjana33@mailer.com\",\n  \"officeFaxNumber\": \"\",\n  \"areaFocus\": \"\",\n  \"hospitalAffiliation\": \"\",\n  \"ageGroupSeen\": null,\n  \"spokenLanguages\": null,\n  \"providerEmployment\": \"\",\n  \"insurance_verification\": \"\",\n  \"prior_authorization\": \"\",\n  \"secondOpinion\": \"\",\n  \"careService\": null,\n  \"bio\": \"\",\n  \"expertise\": \"\",\n  \"workExperience\": \"\",\n  \"licenceInformation\": [\n    {\n      \"uuid\": \"\",\n      \"licenseState\": \"\",\n      \"licenseNumber\": \"\"\n    }\n  ],\n  \"deaInformation\": [\n    {\n      \"deaState\": \"\",\n      \"deaNumber\": \"\",\n      \"deaTermDate\": \"\",\n      \"deaActiveDate\": \"\"\n    }\n  ]\n}\n"
+                        },
+                        {
+                          "text": "Response Status: \u001b[33m401\u001b[39m\n"
+                        },
+                        {
+                          "text": "Response Headers: {\n  server: \u001b[32m'nginx/1.24.0 (Ubuntu)'\u001b[39m,\n  date: \u001b[32m'Wed, 30 Jul 2025 05:22:54 GMT'\u001b[39m,\n  \u001b[32m'content-length'\u001b[39m: \u001b[32m'0'\u001b[39m,\n  connection: \u001b[32m'keep-alive'\u001b[39m,\n  vary: \u001b[32m'Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Origin, Access-Control-Request-Method, Access-Control-Request-Headers'\u001b[39m,\n  \u001b[32m'www-authenticate'\u001b[39m: \u001b[32m'Bearer error=\"invalid_token\", error_description=\"An error occurred while attempting to decode the Jwt: Jwt expired at 2025-07-27T15:52:48Z\", error_uri=\"https://tools.ietf.org/html/rfc6750#section-3.1\"'\u001b[39m,\n  \u001b[32m'x-content-type-options'\u001b[39m: \u001b[32m'nosniff'\u001b[39m,\n  \u001b[32m'x-xss-protection'\u001b[39m: \u001b[32m'0'\u001b[39m,\n  \u001b[32m'cache-control'\u001b[39m: \u001b[32m'no-cache, no-store, max-age=0, must-revalidate'\u001b[39m,\n  pragma: \u001b[32m'no-cache'\u001b[39m,\n  expires: \u001b[32m'0'\u001b[39m,\n  \u001b[32m'x-frame-options'\u001b[39m: \u001b[32m'DENY'\u001b[39m\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-30T05:22:53.755Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Chadcredentials\\ApiCode\\tests\\test-complete-workflow.ts",
+                        "column": 32,
+                        "line": 124
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "04b249d41b3ce072c13f-811a323f6149a26232cf",
+              "file": "test-complete-workflow.ts",
+              "line": 57,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-07-30T05:22:50.931Z",
+    "duration": 3482.3129999999996,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

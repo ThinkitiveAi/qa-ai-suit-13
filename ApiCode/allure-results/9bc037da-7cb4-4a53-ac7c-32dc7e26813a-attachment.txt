@@ -1,0 +1,81 @@
+🚀 Starting Healthcare API Testing Workflow...
+Base URL: https://stage-api.ecarehealth.com
+Tenant ID: stage_aithinkitive
+Headers: {
+  Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJldEJ0MVpKbDlOQ1pEX0VMWUM2dDlISzItQkQybU5wOHZHX3lhczFXN1pZIn0.eyJleHAiOjE3NTM2MzE1NjgsImlhdCI6MTc1MzU5NTU2OCwianRpIjoiYTk2OTUyNGMtMzAwYS00ZjcwLTlmMDQtYmQ3MTgwYmM5OTBkIiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2VfYWl0aGlua2l0aXZlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxMjFjZjk2LWFkM2EtNDIxMC04N2ViLWFkNDNlZjcxYmY4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImpzLWNsaWVudCIsInNpZCI6ImU2NGJmZWEzLWFlNTctNGIwNC1iODMyLTZjYjM0YjllZmQ3NiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJQUk9WSURFUiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zdGFnZV9haXRoaW5raXRpdmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUm9zZSBHb21leiIsInByZWZlcnJlZF91c2VybmFtZSI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20iLCJnaXZlbl9uYW1lIjoiUm9zZSIsImZhbWlseV9uYW1lIjoiR29tZXoiLCJlbWFpbCI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20ifQ.YLwVaATMOWxOPTAlrCuVHuxklgIrDpUQBNMIzo0wutP6gwGXejlXLoAQu8hweEWpjK90geBMBbocqkVO9NaUnzLxrjhRmTHAnyvY7-DYGt7xqCFQdAzXVE1PQf6A9CN8iN3RXlI-peAgB8wNwxfkvbyqZshJeUXsVwzdqWBrceIYDmFZ2kywXMdChAqlyGvvxeqnirly0BhgOSoLL8RttTPV4w9r0vDY_FG6fwJ4nb6HhBn9yQ0NXcvodGEVC2aXTRj1eJoTRDZG-9hzZnTDxDSGduoRyKk-GgvaXk-JlO6X0nff-sVMvx50ZEm6vzDnuZ37tnmo0GoFVIGz3cU8bA',
+  'Content-Type': 'application/json',
+  'x-tenantid': 'stage_aithinkitive'
+}
+
+📋 STEP 1: Creating Provider...
+Request URL: https://stage-api.ecarehealth.com/api/master/provider
+Request Headers: {
+  Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJldEJ0MVpKbDlOQ1pEX0VMWUM2dDlISzItQkQybU5wOHZHX3lhczFXN1pZIn0.eyJleHAiOjE3NTM2MzE1NjgsImlhdCI6MTc1MzU5NTU2OCwianRpIjoiYTk2OTUyNGMtMzAwYS00ZjcwLTlmMDQtYmQ3MTgwYmM5OTBkIiwiaXNzIjoiaHR0cHM6Ly9kZXYtaWFtLmVjYXJlaGVhbHRoLmNvbS9yZWFsbXMvc3RhZ2VfYWl0aGlua2l0aXZlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxMjFjZjk2LWFkM2EtNDIxMC04N2ViLWFkNDNlZjcxYmY4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImpzLWNsaWVudCIsInNpZCI6ImU2NGJmZWEzLWFlNTctNGIwNC1iODMyLTZjYjM0YjllZmQ3NiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJQUk9WSURFUiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zdGFnZV9haXRoaW5raXRpdmUiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUm9zZSBHb21leiIsInByZWZlcnJlZF91c2VybmFtZSI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20iLCJnaXZlbl9uYW1lIjoiUm9zZSIsImZhbWlseV9uYW1lIjoiR29tZXoiLCJlbWFpbCI6InJvc2UuZ29tZXpAam91cnJhcGlkZS5jb20ifQ.YLwVaATMOWxOPTAlrCuVHuxklgIrDpUQBNMIzo0wutP6gwGXejlXLoAQu8hweEWpjK90geBMBbocqkVO9NaUnzLxrjhRmTHAnyvY7-DYGt7xqCFQdAzXVE1PQf6A9CN8iN3RXlI-peAgB8wNwxfkvbyqZshJeUXsVwzdqWBrceIYDmFZ2kywXMdChAqlyGvvxeqnirly0BhgOSoLL8RttTPV4w9r0vDY_FG6fwJ4nb6HhBn9yQ0NXcvodGEVC2aXTRj1eJoTRDZG-9hzZnTDxDSGduoRyKk-GgvaXk-JlO6X0nff-sVMvx50ZEm6vzDnuZ37tnmo0GoFVIGz3cU8bA',
+  'Content-Type': 'application/json',
+  'x-tenantid': 'stage_aithinkitive'
+}
+Request Payload: {
+  "roleType": "PROVIDER",
+  "active": false,
+  "admin_access": true,
+  "status": false,
+  "avatar": "",
+  "role": "PROVIDER",
+  "firstName": "sanjana",
+  "lastName": "parmar",
+  "gender": "FEMALE",
+  "phone": "9797979999",
+  "npi": "9998884488",
+  "specialities": null,
+  "groupNpiNumber": "",
+  "licensedStates": null,
+  "licenseNumber": "",
+  "acceptedInsurances": null,
+  "experience": "",
+  "taxonomyNumber": "",
+  "workLocations": null,
+  "email": "sanjana33@mailer.com",
+  "officeFaxNumber": "",
+  "areaFocus": "",
+  "hospitalAffiliation": "",
+  "ageGroupSeen": null,
+  "spokenLanguages": null,
+  "providerEmployment": "",
+  "insurance_verification": "",
+  "prior_authorization": "",
+  "secondOpinion": "",
+  "careService": null,
+  "bio": "",
+  "expertise": "",
+  "workExperience": "",
+  "licenceInformation": [
+    {
+      "uuid": "",
+      "licenseState": "",
+      "licenseNumber": ""
+    }
+  ],
+  "deaInformation": [
+    {
+      "deaState": "",
+      "deaNumber": "",
+      "deaTermDate": "",
+      "deaActiveDate": ""
+    }
+  ]
+}
+Response Status: 401
+Response Headers: {
+  server: 'nginx/1.24.0 (Ubuntu)',
+  date: 'Wed, 30 Jul 2025 05:22:54 GMT',
+  'content-length': '0',
+  connection: 'keep-alive',
+  vary: 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers, Origin, Access-Control-Request-Method, Access-Control-Request-Headers',
+  'www-authenticate': 'Bearer error="invalid_token", error_description="An error occurred while attempting to decode the Jwt: Jwt expired at 2025-07-27T15:52:48Z", error_uri="https://tools.ietf.org/html/rfc6750#section-3.1"',
+  'x-content-type-options': 'nosniff',
+  'x-xss-protection': '0',
+  'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+  pragma: 'no-cache',
+  expires: '0',
+  'x-frame-options': 'DENY'
+}

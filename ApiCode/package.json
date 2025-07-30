@@ -1,0 +1,31 @@
+{
+  "name": "healthcare-api-framework",
+  "version": "1.0.0",
+  "description": "Healthcare API Testing Framework with Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test tests/test-complete-workflow.ts --reporter=html",
+    "test:enhanced": "npx playwright test tests/test-enhanced-workflow.ts --reporter=html",
+    "test:all": "npx playwright test tests/ --reporter=html",
+    "test:headed": "npx playwright test tests/test-complete-workflow.ts --headed --reporter=html",
+    "test:debug": "npx playwright test tests/test-complete-workflow.ts --debug",
+    "test:ui": "npx playwright test tests/test-complete-workflow.ts --ui",
+    "install:playwright": "npx playwright install",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [
+    "api-testing",
+    "playwright",
+    "healthcare",
+    "typescript",
+    "framework"
+  ],
+  "author": "Healthcare API Testing Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.8.0",
+    "allure-playwright": "^3.3.2",
+    "typescript": "^5.2.2"
+  }
+}
